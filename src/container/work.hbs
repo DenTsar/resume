@@ -1,0 +1,71 @@
+<div>
+  {{#with main}}
+  <main>
+    <section>
+      {{> title data = 'Work History:' big = true}}
+    <div>
+      <ul>
+        {{#each work}}
+          <li> 
+            {{position}} 
+            {{#with duration}}     
+              from {{from}} 
+              {{#if to}}
+                to {{to}} 
+                {{else}}
+                 - ще працюю
+              {{/if}}   
+            {{/with}} 
+            <br>
+            {{#with company}} 
+              {{#if url}}{{> link text=name href=url blank=true }}
+              {{else}}  <b>{{name}}</b>
+              {{/if}}        
+            {{/with}}
+           <div>
+              <strong>Projects: {{projectAmount}} </strong>
+           </div>            
+            <br> <br> 
+         
+            {{#each projects}}
+              <div>{{> link text=name href=url}}</div>
+              <div>
+                <br>
+                {{about}}
+              </div>
+                <br> 
+                <em>
+                  Project stacks ({{stackAmount}})
+                </em>
+                <br>
+                <ul>            
+                  {{#each stack}}             
+                    <li>
+                      {{name}}
+                    </li>
+                  {{/each}}
+                </ul>
+              </div>
+
+              <em>
+                Project awards
+              </em>
+              <br>
+              {{#each awards}}              
+                <li>
+                    {{name}}
+                </li>
+              {{/each}}
+              </ul>
+            {{/each}}
+                
+
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+    </section>
+
+  </main>
+  {{/with}}
+</div>

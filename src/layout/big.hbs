@@ -14,12 +14,12 @@
   </head>
 
 <body>
+	{{>nav}}
 	{{#with header}}  
 		<header>
+		
 
-		{{>nav}}
-
-			<div>
+			{{!-- <div>
 				,<h1>{{name.firstname}} {{name.lastname}}</h1>
 			</div>
 			
@@ -35,7 +35,7 @@
 			
 			<div>
 			<em><address>{{address}}</address></em>
-			</div>
+			</div> --}}
 			<br>
 			<hr />
 
@@ -44,7 +44,6 @@
 
     {{{body}}}
   </body>
-  
-	{{>footer}}
 
+	{{>footer}}
 </html>
