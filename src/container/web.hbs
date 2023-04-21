@@ -1,0 +1,99 @@
+<div>
+  <main>
+    {{#with web}}
+      <section>
+        <h2>WEB:</h2>
+        <hr />
+        {{#each languages}}
+          <strong>Language:
+            {{name}}</strong>
+          <br />
+          version:
+          {{version}}
+          <br />
+          <i>
+            {{description}}
+          </i>
+          <br />
+          <hr />
+
+          {{#each functions}}
+            <li>
+
+              functions:
+              {{name}}
+              <br />
+              <i>
+                {{description}}
+              </i>
+              <br />
+              parameters:
+              {{#each parameters}}
+                <li>
+                  {{name}}
+                  <br />
+                  type:{{type}}
+                  <br />
+                  <i>
+                    {{description}}
+                  </i>
+                </li>
+                <br />
+              {{/each}}
+            </li>
+          {{/each}}
+          {{#each elements}}
+            <li>
+
+              elements:
+              {{name}}
+              <br />
+              <i>
+                {{description}}
+              </i>
+              <br />
+              attributes:
+              {{#each attributes}}
+                <li>
+                  {{name}}
+                  -
+                  <i>
+                    {{description}}
+                  </i>
+                </li>
+                <br />
+              {{/each}}
+            </li>
+          {{/each}}
+          {{#each properties}}
+            <li>
+
+              properties:
+              {{name}}
+              <br />
+              <i>
+                {{description}}
+              </i>
+              <br />
+              values:
+              {{#each values}}
+                <li>
+                  {{value}}
+                  -
+                  <i>
+                    {{description}}
+                  </i>
+                </li>
+                <br />
+              {{/each}}
+            </li>
+          {{/each}}
+          <hr />
+
+        {{/each}}
+      </section>
+
+    {{/with}}
+  </main>
+
+</div>
