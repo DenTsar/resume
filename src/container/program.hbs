@@ -1,0 +1,132 @@
+<div>
+  <main>
+    {{#with program}}
+      <section>
+        <h2>Program:</h2>
+        {{#with excursion}}
+          {{name}}
+          <br />
+          location:
+          <br />
+          {{#with location}}
+            {{city}},
+            {{country}}
+          {{/with}}
+          <br />
+          date:
+          <date>{{date}}</date>
+          <br />
+          <hr />
+
+          {{#each program}}
+            {{name}}
+            <br />
+            type:
+            {{type}}
+            <br />
+            duration:
+            {{duration}}
+            <br />
+            details:
+            <br />
+            {{#with details}}
+
+              {{#with museum}}
+                {{name}}
+                <br />
+                {{#with location}}
+                  <address>
+                    {{address}},
+                    {{city}},
+                    {{country}}
+                  </address>
+                {{/with}}
+                <br />
+                exhibits:
+                <br />
+                {{#each exhibits}}
+                  <li>
+                    {{name}}
+                    <br />
+                    artist:
+                    {{artist}}
+                    <br />
+                    description:
+                    {{description}}
+                    <br />
+                    audio_guide:
+                    {{#if audio_guide}}
+                      yes
+                    {{else}}
+                      nou
+                    {{/if}}
+                  </li>
+                {{/each}}
+              {{/with}}
+              {{#with venue}}
+                {{name}}
+                <br />
+                {{#with location}}
+                  <address>
+                    {{address}},
+                    {{city}},
+                    {{country}}
+                  </address>
+                {{/with}}
+                <br />
+
+                {{#each exhibits}}
+                  exhibits:
+                  <li>
+                    {{name}}
+                    <br />
+                    artist:
+                    {{artist}}
+                    <br />
+                    description:
+                    {{description}}
+                    <br />
+                    audio_guide:
+                    {{#if audio_guide}}
+                      yes
+                    {{else}}
+                      nou
+                    {{/if}}
+                  </li>
+                {{/each}}
+
+              {{/with}}
+              {{#each performers}}
+                performers:
+                <li>
+                  {{name}}
+                  <br />
+                  {{type}}
+                  <br />
+                </li>
+              {{/each}}
+
+              <br />
+
+              guide:
+              {{#with guide}}
+                {{name}}
+                <br />
+                language:
+                {{language}}
+                <br />
+                Rating:
+                {{rating}}
+              {{/with}}
+              <hr />
+            {{/with}}
+
+          {{/each}}
+
+        {{/with}}
+      </section>
+
+    {{/with}}
+  </main>
+
+</div>
