@@ -916,6 +916,12 @@ router.get('/car', function (req, res) {
 })
 
 // ================================================================
+router.get('/bootstrap', function (req, res) {
+  res.render('bootstrap', {
+    layout: 'bootstrap',
+  })
+})
 
+// ================================================================
 // Підключаємо роутер до бек-енду
 module.exports = router
