@@ -1,0 +1,28 @@
+{{#each cards}}
+  {{#with this}}
+    <div class='col-4 card p-2'>
+      <img
+        class='crt-img-top'
+        src={{image}}
+        alt={{title}}
+      />
+      <div class='card-title px-2'>
+        <h5>{{title}}
+          {{#if isHot}}
+            <span
+              class='badge text-bg-warning rounded-pill'
+            >Hot</span>
+          {{/if}}
+
+          {{#if idNew}}
+            <span
+              class='badge text-bg-primary rounded-pill'
+            >New</span>
+          {{/if}}
+        </h5>
+      </div>
+      <p class='mx-2'>{{description}}</p>
+    </div>
+
+  {{/with}}
+{{/each}}

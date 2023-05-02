@@ -1,0 +1,12 @@
+<div class='nav' ms-0>
+  {{#with navigation}}
+    {{#each links}}
+      <div class='nav-item'>
+        <a href={{href}} class='nav-link'>{{text}}</a>
+      </div>
+    {{/each}}
+    <div class='nav-item'>
+      <a href='#' class='nav-link disabled'>Disabled</a>
+    </div>
+  {{/with}}
+</div>
