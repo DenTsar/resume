@@ -1,0 +1,180 @@
+<main>  
+
+  <div class='row my-3'>
+    <div class='col-12'>
+      <ol class='breadcrumb m-3 ms-4'>
+        {{#each breadcrumb}}
+          <li class='breadcrumb-item'>
+            {{#if url}}
+              <a href={{url}}>{{name}}</a>
+            {{else}}
+              {{name}}
+            {{/if}}
+          </li>
+        {{/each}}
+      </ol>
+    </div>
+  </div>
+
+  <div class='row col-12'>
+    {{#with productData}}
+      <div class='col-6'>
+
+        <div class='card'>
+          <img
+            class='crd-img-top'
+            src={{img}}
+            alt='Product photo'
+          />
+        </div>
+
+        {{#with info}}
+          <div class='card mt-4 p-3'>
+            <div class='card-title display-2'>
+              <h5>{{title}}</h5>
+            </div>
+            <p>{{about}}</p>
+            <h3>{{price}}</h3>
+            <div>
+              {{#each category}}
+                {{#if isHot}}
+                  <span
+                    class='badge text-bg-warning rounded-pill'
+                  >
+                    {{name}}
+                  </span>
+                {{/if}}
+
+                {{#if isNew}}
+                  <span
+                    class='badge text-bg-primary rounded-pill'
+                  >
+                    {{name}}
+                  </span>
+                {{/if}}
+
+                {{#if isBonus}}
+                  <span
+                    class='badge text-bg-info rounded-pill'
+                  >
+                    {{name}}
+                  </span>
+                {{/if}}
+              {{/each}}
+            </div>
+          </div>
+        {{/with}}
+      </div>
+
+      <div class='col-5 ms-5'>
+        <table class='table mt-0'>
+
+          {{#with item}}
+            <thead>
+              <hr />
+              <tr>
+                {{#each head}}
+                  <th>{{this}}</th>
+                {{/each}}
+              </tr>
+            </thead>
+            <tbody>
+              {{#each body}}
+                <tr>
+                  {{#each this}}
+                    <td>{{this}}</td>
+                  {{/each}}
+                </tr>
+              {{/each}}
+            </tbody>
+
+          {{/with}}
+
+        </table>
+
+        <div class='card p-2 my-4'>
+
+          {{#with param}}
+            <div class='card-header'>
+              {{title}}
+            </div>
+            <ul class='list-group list-group-flush'>
+              {{#each list}}
+                <li class='list-group-item'>
+                  {{this}}
+                </li>
+              {{/each}}
+            </ul>
+          {{/with}}
+        </div>
+
+        <div class='alert alert-danger p-2'>
+          {{#if alert.isError}}{{alert.text}}{{/if}}
+        </div>
+
+      </div>
+
+      <div class='row card col-12 m-2 p-2 mb-5'>
+        <div>
+
+          {{#each actionList}}
+            <span class="ms-0 me-3">
+            <button class=
+            {{#if isWarning}}
+               'btn btn-warning'
+              >{{name}}</button>
+              {{else}}
+                {{#if isError}}              
+                  'p=3 m=3 btn btn-outline-danger'
+                  >{{name}}</button>
+                  {{else}}
+                    {{#if isSuccess}}
+                      'btn btn-success'
+                      >{{name}}</button>
+                      {{else}}
+                        {{#if isGood}}
+                        'btn btn-outline-success'
+                        >{{name}}</button>
+                        {{/if}}
+                    {{/if}}
+                {{/if}}
+            {{/if}}
+            </span>
+
+          {{/each}}
+        </div>
+      </div>
+
+    {{/with}}
+ 
+
+    <div class="my-5">
+      <br>
+      <br>
+      <hr>
+    </div>
+
+    {{#with goodsOtherBlock}}
+      <div class="row col-12">
+        <h3 class="text-center" >{{title}}</h3>
+      </div>
+
+      {{>shopcard}}
+      
+    {{/with}}
+
+    <div class="my-5">
+      <hr />
+    </div>
+
+  {{>shopaction}}
+
+    <div class="mt-5 mb-0">
+      <hr />
+    </div>
+
+
+
+</main>
+
+
