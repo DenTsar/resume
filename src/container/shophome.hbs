@@ -1,17 +1,5 @@
 <main class='m-5'>
-  <hr />
-  <div class='nav py-0'>
-    {{#with navigation}}
-      {{#each links}}
-        <div class='nav-item'>
-          <a href={{href}} class='nav-link'>{{text}}</a>
-        </div>
-      {{/each}}
-      <div class='nav-item'>
-        <a href='#' class='nav-link disabled'>Shop home</a>
-      </div>
-    {{/with}}
-  </div>
+
   <hr />
 
   <div class='row'>
@@ -38,7 +26,9 @@
               {{/if}}
             </div>
 
-            <p class='m-2'>{{description}}</p>
+            <div class='card-body'>
+              <p class='m-2'>{{description}}</p>
+            </div>
           </div>
         </div>
       {{/each}}
@@ -79,14 +69,14 @@
 
         <div class='row mt-5'>
           {{#each cards}}
-            <div class='col-4 px-2 py-3'>
+            <div class='col-4'>
               <div class='card'>
                 <img
                   class='crd-img-top'
                   src={{image}}
                   alt={{title}}
                 />
-                <div class='px-3'>
+                <div class='card-body'>
                   <div class='card-title'>
                     <h5>{{title}}
                       {{#if isHot}}
@@ -101,7 +91,9 @@
                       {{/if}}
                     </h5>
                   </div>
+
                   <p>{{description}}</p>
+
                 </div>
               </div>
             </div>
@@ -115,18 +107,21 @@
 
   {{#with subscribe}}
     <div class='col-12'>
-      <div class='card p-3 text-bg-dark'>
-        <h2 class='card-=header mb-4'>{{header}}</h2>
-        <p>{{description}} </p>
-        {{#each buttons}}
-          <div>
-            <a
-              class='btn btn-primary m-2'
-              href={{link}}
-            >{{text}}</a>
-          </div>
-        {{/each}}
-
+      <div class='card text-bg-dark'>
+        <div class='card-header'>
+          <h2>{{header}}</h2>
+        </div>
+        <div class='card-body'>
+          <p>{{description}} </p>
+          {{#each buttons}}
+            <div>
+              <a
+                class='btn btn-primary m-1'
+                href={{link}}
+              >{{text}}</a>
+            </div>
+          {{/each}}
+        </div>
       </div>
     </div>
   {{/with}}
@@ -136,38 +131,24 @@
   {{#with service}}
     <div class='col-12'>
       <div class='card p-2 text-bg-success text-center'>
-        <h2 class='card-=header mb-4'>{{title}}</h2>
-        <p>{{description}} </p>
-        {{#each buttons}}
-          <div>
-            <a
-              class='btn btn-primary m-2'
-              href={{link}}
-            >{{text}}</a>
-          </div>
-        {{/each}}
-
+        <div class='card-=header mb-4'>
+          <h2>{{title}}</h2>
+        </div>
+        <div class='card-body'>
+          <p>{{description}} </p>
+          {{#each buttons}}
+            <div>
+              <a
+                class='btn btn-primary m-2'
+                href={{link}}
+              >{{text}}</a>
+            </div>
+          {{/each}}
+        </div>
       </div>
     </div>
   {{/with}}
 
   <div class='py-5'><hr /></div>
-
-  <div class='row col-10'>
-    {{#each footer}}
-      <div class='col-2 nav flex-column'>
-
-        <a href={{0.link}} class='nav-link'>{{0.text}}</a>
-        <a href={{1.link}} class='nav-link'>{{1.text}}</a>
-        <a href={{2.link}} class='nav-link'>{{2.text}}</a>
-        <a
-          href={{3.link}}
-          class='nav-link disabled'
-        >{{3.text}}</a>
-
-      </div>
-    {{/each}}
-
-  </div>
 
 </main>
