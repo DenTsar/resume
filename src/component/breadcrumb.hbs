@@ -1,0 +1,15 @@
+<div class='row my-3'>
+  <div class='col-12'>
+    <ol class='breadcrumb m-3 ms-4'>
+      {{#each breadcrumb}}
+        <li class='breadcrumb-item'>
+          {{#if url}}
+            <a href={{url}}>{{name}}</a>
+          {{else}}
+            {{name}}
+          {{/if}}
+        </li>
+      {{/each}}
+    </ol>
+  </div>
+</div>

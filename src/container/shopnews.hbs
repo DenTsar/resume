@@ -1,0 +1,50 @@
+<main>  
+
+{{>breadcrumb}}
+
+  <div class='row col-12'>
+
+    {{#with newsData}}
+        <div class='card p-0 mb-4'>
+          <img
+            class='crd-img-top'
+            src={{photo}}
+            alt='cat photo'
+          />
+        </div>
+
+        {{#with head}}
+          <h2>{{heading}}</h2>
+          <p>{{description}}</p>
+        {{/with}}
+
+        {{#each body}}               
+              <h4 class="mt-3">{{title}}</h4>
+              <p>{{text}}</p>              
+        {{/each}}
+    {{/with}}   
+
+    <div class="my-5">
+      <hr />
+    </div>
+
+    {{#with newsOtherBlock}}
+      {{>shoppost}}
+    {{/with}}
+
+    <div class="my-5">
+      <hr />
+    </div>
+
+    {{>shopaction}}
+
+    <div class="mt-5 mb-0">
+      <hr />
+    </div>
+  </div>
+
+
+
+</main>
+
+
