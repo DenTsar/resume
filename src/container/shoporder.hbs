@@ -1,0 +1,67 @@
+<main class='p-5'>
+  <div class='row g-5'>
+    <div class='col-12'>
+      <hr class='pb-5' />
+      <H2>{{header}}</H2>
+
+      {{#with contacts_data}}
+        <div class='row col-8'>
+        
+        </div><h3 class="pt-5 pb-2">{{title}} </h3>
+        
+          {{#each buttons}}
+            {{#if isPrimary}}
+              <button class="btn btn-warning">{{text}}</button>
+              {{else}} 
+              <button class="btn btn-outline-warning">{{text}}</button>
+            {{/if}}
+          {{/each}}
+
+          <div class='row'>
+              <div class="col-8">
+          {{#with form}}           
+            
+                
+              {{#each input}}
+                  
+                    <div class='col-4 p-2'>
+                      <label class='form-label m-0'><h6>{{label}}</h6></label>
+                      <input class='form-control' placeholder={{placeholder}}>
+                      <div class='form-text'>
+                        {{caption}}
+                      </div>
+                    </div> 
+                  
+              {{/each}}
+              
+               
+
+
+
+
+            {{!-- {{#with }}
+              
+                {{#with @first}}
+                  <label class='form-label'>la</label>
+                  <input class='form-control' placeholder=placeholder>
+                  <div class='form-text'>
+                    caption
+                  </div>
+                {{/with}}
+              </div>
+            {{/with}} --}}
+          {{/with}}
+        </div>
+      {{/with}}
+        
+
+      </div>
+
+      <div class='row'>
+
+      </div>
+
+      <div class='py-5'><hr /></div>
+    </div>
+  </div>
+</main>

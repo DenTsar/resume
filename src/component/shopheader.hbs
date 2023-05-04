@@ -2,11 +2,13 @@
   {{#with navigation}}
     {{#each links}}
       <div class='nav-item'>
-        <a href={{href}} class='nav-link'>{{text}}</a>
+        {{#if href}}
+          <a href={{href}} class='nav-link'>{{text}}</a>
+        {{else}}
+          <a href='#' class='nav-link disabled'>{{text}}</a>
+        {{/if}}
+
       </div>
     {{/each}}
-    <div class='nav-item'>
-      <a href='#' class='nav-link disabled'>Disabled</a>
-    </div>
   {{/with}}
 </div>
