@@ -1,7 +1,6 @@
 <main>  
 
 {{>breadcrumb}}
-
   <div class='row col-12'>
 
     {{#with newsData}}
@@ -29,7 +28,10 @@
     </div>
 
     {{#with newsOtherBlock}}
-      {{>shoppost}}
+    <h2 class='text-center pt-5'>{{title}} </h2>
+      {{#each cards}}
+            {{>shoppost}}        
+      {{/each}}
     {{/with}}
 
     <div class="my-5">
@@ -42,8 +44,6 @@
       <hr />
     </div>
   </div>
-
-
 
 </main>
 

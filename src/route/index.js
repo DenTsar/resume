@@ -2170,9 +2170,9 @@ router.get('/shoporder', function (req, res) {
     total: {
       title: 'Всього',
       item_list: [
-        { name: 'Ноут', price: '25 000 ₴' },
-        { name: 'Мишка', price: '25 000 ₴' },
-        { name: 'Клава', price: '25 000 ₴' },
+        { name: 'Ноут', price: '65 000 ₴' },
+        { name: 'Мишка', price: '5 000 ₴' },
+        { name: 'Клава', price: '5 000 ₴' },
       ],
       additional_info: [
         { text: 'Всього товарів', value: '75 000 ₴' },
