@@ -4,34 +4,7 @@
 
   <div class='row'>
     {{#with newsBlock}}
-      <h2 class='text-center pt-5'>{{title}} </h2>
-      {{#each cards}}
-        <div class='col-3 g-3'>
-          <div class='card text-bg-dark'>
-            <div class='card-header'>
-              {{title}}
-              {{#if isNew}}
-                <div
-                  class='badge text-bg-success rounded-pill'
-                >
-                  Нова
-                </div>
-              {{/if}}
-              {{#if isTop}}
-                <div
-                  class='badge text-bg-danger rounded-pill'
-                >
-                  Топ
-                </div>
-              {{/if}}
-            </div>
-
-            <div class='card-body'>
-              <p class='m-2'>{{description}}</p>
-            </div>
-          </div>
-        </div>
-      {{/each}}
+      {{>shoppost}}
     {{/with}}
   </div>
 

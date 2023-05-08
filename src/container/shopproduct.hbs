@@ -162,8 +162,9 @@
       <div class="row col-12">
         <h3 class="text-center" >{{title}}</h3>
       </div>
-
-      {{>shopcard}}
+      {{#each cards}}
+        {{>shopcard}}
+      {{/each}}
       
     {{/with}}
 
