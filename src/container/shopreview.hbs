@@ -80,61 +80,12 @@
                 </div>
               </div>  
             {{/with}}
-
           {{/with}}
 
           <hr class="my-5" style="border: 2px solid;">
 
           {{#each reviewList}}
-            <div class="card mb-5 mt-3">
-              <div class="card m-3">
-                <div class="card-header">
-                  {{#with title}}
-                    <h5>{{userName}}</h5>
-                    {{caption}}
-                    <br>
-                    <data>{{date}}</data>
-                  {{/with}}
-                </div>
-                <div class="card-body">
-                  {{#with reviewBody}}
-                    <div class="my-3">{{seller.title}}: <b>{{seller.value}}</b>                    
-                    </div>
-                    <div class="my-3">{{rating.title}}: {{rating.value}}
-                    </div>                     
-                    {{#each text}}
-                      <div class="my-3">{{this}}                     
-                      </div>
-                    {{/each}} 
-                    <div class="my-3">
-                      <b>{{advantages.title}}: </b>
-                      <br>
-                      {{advantages.text}}                  
-                    </div>
-                    <div class="my-3">
-                      <b>{{disadvantages.title}}: </b>
-                      <br>
-                      {{disadvantages.text}}                
-                    </div>
-                    
-                      <div class="row ">
-                        {{#each images}}
-                          <div class="col-2 m-0">
-                            <img src={{this}} height="120px" width="120px">
-                          </div>
-                        {{/each}}
-                      </div>
-                </div>
-              </div>
-                      {{#each coments}}
-                        <div class="card card-body m-3 ms-5">
-                          <h4>{{userName}}</h4>
-                          <date>{{date}}</date>
-                          <p>{{text}}</p>
-                        </div>
-                      {{/each}}  
-                  {{/with}}
-            </div>
+            {{>reviewItem}}
           {{/each}}
       </div>
       {{>shopaction}}
