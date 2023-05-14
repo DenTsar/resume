@@ -1,8 +1,5 @@
-<div>
-
+<main> 
   {{#with main}}
-  
-  <main>
     <section>
       {{> title data = 'Work History:' big = true}}
     <div>
@@ -15,7 +12,7 @@
               {{#if to}}
                 to {{to}} 
                 {{else}}
-                 - ще працюю
+                - ще працюю
               {{/if}}   
             {{/with}} 
             <br>
@@ -24,11 +21,11 @@
               {{else}}  <b>{{name}}</b>
               {{/if}}        
             {{/with}}
-           <div>
+          <div>
               <strong>Projects: {{projectAmount}} </strong>
-           </div>            
+          </div>            
             <br> <br> 
-         
+        
             {{#each projects}}
               <div>{{> link text=name href=url}}</div>
               <div>
@@ -67,7 +64,6 @@
       </ul>
     </div>
     </section>
-
-  </main>
   {{/with}}
-</div>
+  
+</main>

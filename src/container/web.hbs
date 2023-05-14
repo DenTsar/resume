@@ -1,5 +1,5 @@
-<div>
-  <main>
+<main class='p-5'>
+  <div class='card card-body'>
     {{#with web}}
       <section>
         <h2>WEB:</h2>
@@ -95,7 +95,6 @@
                   {{#each values}}
                     <li>
                       {{value}}
-                      -
                       <i>
                         {{description}}
                       </i>
@@ -106,12 +105,10 @@
               </li>
             {{/each}}
           </ul>
-          <hr />
-
         {{/each}}
       </section>
 
     {{/with}}
-  </main>
+  </div>
 
-</div>
+</main>
