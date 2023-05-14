@@ -1,29 +1,22 @@
-<main>
-  <div>
+<main class='p-5'>
+  <div class='card card-body'>
 
-    <h1 style='color:red'>My car</h1>
-    <h2 style='color:darkblue'>{{make}} {{model}}</h2>
     <img
+      class='img-card-top'
       src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPnA2QIwGh3UxK6T2VnZ7Vvb7uDG4CaFiKHg&usqp=CAU'
-      height='150'
-      width='200'
+      height='300'
+      width='400'
       alt='Toyota Camry'
     />
+    <h2 style='color:darkblue'>{{make}} {{model}}</h2>
 
-    <br />
-    <br />
-    <b style='color:blue'>Layout:{{layout}}</b>
-    <br />
-    <br />
-    <b style='color:blue'>Year:{{year}}</b>
+    <b class='my-2' style='color:blue'>Layout:{{layout}}</b>
 
-    <br />
-    <br />
-    <b style='color:blue'> Color:{{color}}</b>
+    <b class='my-2' style='color:blue'>Year:{{year}}</b>
 
-    <br />
-    <br />
-    <b style='color:blue'>Features:</b>
+    <b class='my-2' style='color:blue'> Color:{{color}}</b>
+
+    <b class='my-2' style='color:blue'>Features:</b>
 
     <ul>
 
@@ -298,7 +291,7 @@
           {{/with}}
         </ul>
         <li>
-          <b style='color:blue'>total: {{total}}$</b>
+          <h5 style='color:blue'>total: {{total}}$</h5>
         </li>
 
       {{/with}}

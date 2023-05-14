@@ -1,5 +1,5 @@
-<div>
-  <main>
+<main class='p-5'>
+  <div class='card card-body'>
     {{#with program}}
       <section>
         <h2>Program:</h2>
@@ -15,8 +15,7 @@
           <br />
           date:
           <date>{{date}}</date>
-          <br />
-          <hr />
+          <hr class="my-4">
 
           {{#each program}}
             {{name}}
@@ -118,7 +117,7 @@
                 Rating:
                 {{rating}}
               {{/with}}
-              <hr />
+          
             {{/with}}
 
           {{/each}}

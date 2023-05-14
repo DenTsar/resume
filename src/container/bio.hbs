@@ -1,141 +1,127 @@
-<div>
-  <main>
-    <section>
-      <h2>Bio:</h2>
-      <strong>{{name}}</strong>
-      <br />
-      birthdate:
-      <date>{{birthdate}}</date>
-      <br />
-      birthplace:
-      {{birthplace}}
-      <br />
-      deathdate:
-      <date>{{deathdate}}</date>
-      <br />
-      nationality:
-      {{nationality}}
-      <br />
-      occupation:
-      {{occupation}}
-      <br />
-      <hr />
-      Known for:
-      {{#each known_for}}
-        <li>{{this}}</li>
-      {{/each}}
-      <br />
-      <hr />
+<main class='p-5'>
+  <div class='card card-body'>
+    <h2>Bio:</h2>
+    <strong>{{name}}</strong>
+    <br />
+    birthdate:
+    <date>{{birthdate}}</date>
+    <br />
+    birthplace:
+    {{birthplace}}
+    <br />
+    deathdate:
+    <date>{{deathdate}}</date>
+    <br />
+    nationality:
+    {{nationality}}
+    <br />
+    occupation:
+    {{occupation}}
+    <hr class='my-4' />
+    Known for:
+    {{#each known_for}}
+      <li>{{this}}</li>
+    {{/each}}
+    <hr class='my-4' />
 
-      {{#each education}}
-        Education: degree:
-        {{degree}}
-        <br />
-        field:
-        {{field}}
-        <br />
-        institution:
-        {{institution}}
-        <br />
-        year:
-        <data>{{year}}</data>
-        <br />
-      {{/each}}
+    {{#each education}}
+      Education: degree:
+      {{degree}}
       <br />
-      <hr />
-
-      Notable_publications:
-
-      {{#each notable_publications}}
-        <li>
-          {{title}},
-          {{year}},
-          {{publisher}}.
-        </li>
-      {{/each}}
+      field:
+      {{field}}
       <br />
-      <hr />
-
-      Partners:
-      {{#each partners}}
-        <li>
-          {{name}},
-          <br />
-          relationship:
-          {{relationship}}, ({{years}})
-        </li>
-      {{/each}}
+      institution:
+      {{institution}}
       <br />
-      <hr />
-
-      Awards:
+      year:
+      <data>{{year}}</data>
       <br />
-      {{#each awards}}
-        {{title}}, ({{year}})
-        <br />
-        description:
-        {{description}}
-      {{/each}}
-      <br />
-      <hr />
+    {{/each}}
+    <hr class='my-4' />
 
-      Influences:
-      {{#each influences}}
-        <li>
-          {{this}}
-        </li>
-      {{/each}}
-      <br />
-      <hr />
+    Notable_publications:
 
-      Influenced:
-      {{#each influenced}}
-        <li>
-          {{this}}
-        </li>
-      {{/each}}
-      <br />
-      <hr />
-
-      Quotes:
-      {{#each quotes}}
-        <li>
-          <q>{{this}}</q>
-        </li>
-      {{/each}}
-      <br />
-      <hr />
-
-      Major discoveries:
-      <br />
-      {{#each major_discoveries}}
-
-        {{title}}, ({{year}})
-        <br />
-        description:
-        <q>{{description}}</q>
-
-      {{/each}}
-      <br />
-      <hr />
-
-      Contributions:
-      <br />
-      {{#with contributions}}
+    {{#each notable_publications}}
+      <li>
         {{title}},
-        <data>({{year}})</data>
-        <br />
-        description:
-        <q>{{description}}</q>
-        <br />
-        field:
-        {{field}}
+        {{year}},
+        {{publisher}}.
+      </li>
+    {{/each}}
+    <hr class='my-4' />
 
-      {{/with}}
+    Partners:
+    {{#each partners}}
+      <li>
+        {{name}},
+        <br />
+        relationship:
+        {{relationship}}, ({{years}})
+      </li>
+    {{/each}}
+    <hr class='my-4' />
+
+    Awards:
+    <br />
+    {{#each awards}}
+      {{title}}, ({{year}})
       <br />
-      <hr />
-    </section>
+      description:
+      {{description}}
+    {{/each}}
+    <hr class='my-4' />
 
-  </main>
+    Influences:
+    {{#each influences}}
+      <li>
+        {{this}}
+      </li>
+    {{/each}}
+    <hr class='my-4' />
 
-</div>
+    Influenced:
+    {{#each influenced}}
+      <li>
+        {{this}}
+      </li>
+    {{/each}}
+    <hr class='my-4' />
+
+    Quotes:
+    {{#each quotes}}
+      <li>
+        <q>{{this}}</q>
+      </li>
+    {{/each}}
+    <hr class='my-4' />
+
+    Major discoveries:
+    <br />
+    {{#each major_discoveries}}
+
+      {{title}}, ({{year}})
+      <br />
+      description:
+      <q>{{description}}</q>
+
+    {{/each}}
+    <hr class='my-4' />
+
+    Contributions:
+    <br />
+    {{#with contributions}}
+      {{title}},
+      <data>({{year}})</data>
+      <br />
+      description:
+      <q>{{description}}</q>
+      <br />
+      field:
+      {{field}}
+
+    {{/with}}
+    <hr class='my-4' />
+  </div>
+
+</main>

@@ -34,18 +34,10 @@ var footer = {
 
 // ================================================================
 
-router.get('/', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {})
-  //                  ↑↑ сюди вводимо JSON дані
-})
-
 router.get('/education', function (req, res) {
   res.render('education', {
     page: {
-      title: 'Resume/Education:',
+      title: 'Education',
     },
     header,
     main: {
@@ -97,7 +89,7 @@ router.get('/education', function (req, res) {
 router.get('/skils', function (req, res) {
   res.render('skils', {
     page: {
-      title: 'Resume/Skils:',
+      title: 'Skils',
     },
     header,
 
@@ -168,7 +160,7 @@ router.get('/summary', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('summary', {
     page: {
-      title: 'Resume/Resume:',
+      title: 'Summary',
     },
 
     header,
@@ -248,9 +240,8 @@ router.get('/education', function (req, res) {
 
 router.get('/work', function (req, res) {
   res.render('work', {
-    layout: 'big',
     page: {
-      title: 'Resume/Work:',
+      title: 'Work:',
     },
     header,
 
@@ -1615,14 +1606,7 @@ router.get('/shophome', function (req, res) {
   //                  ↑↑ сюди вводимо JSON дані
 })
 
-// ================================================================
-router.get('/', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {})
-  //                  ↑↑ сюди вводимо JSON дані
-})
+// =================================================================
 
 router.get('/list', function (req, res) {
   res.render('list', {
@@ -3288,8 +3272,7 @@ router.get('/shopreview', function (req, res) {
   //                  ↑↑ сюди вводимо JSON дані
 })
 
-// ================================================================// ================================================================ ================================================================
-// ================================================================
+// ================================================================//
 
 router.get('/shopcatalog', function (req, res) {
   // res.render генерує нам HTML сторінку
@@ -3663,5 +3646,40 @@ router.get('/shopcatalog', function (req, res) {
   //                  ↑↑ сюди вводимо JSON дані
 })
 
+// ================================================================
+router.get('/', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('index', {
+    name: 'Денис',
+    sName: 'Царенко',
+    title: 'Resume project',
+    descriptions: 'Це мій перший проект',
+    pages: [
+      'shopcart',
+      'shopcatalog',
+      'shophome',
+      'shopnews',
+      'shoporder',
+      'shopproduct',
+      'shopprofile',
+      'shopreview',
+      'bio',
+      'car',
+      'education',
+      'person',
+      'program',
+      'skils',
+      'summary',
+      'task21',
+      'task22',
+      'task31',
+      'web',
+      'work',
+    ],
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
 // ================================================================// Підключаємо роутер до бек-енду
 module.exports = router
