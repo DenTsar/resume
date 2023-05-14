@@ -1,22 +1,24 @@
-<div class='row ms-1 col-12 p-2 card'>
-  <div class='nav' ms-0>
-    {{#with navigation}}
-      {{#each links}}
-        <div class='nav-item'>
-          {{#if href}}
-            <a href={{href}} class='nav-link'>{{text}}</a>
-          {{else}}
-            <a
-              href='#'
-              class='nav-link disabled'
-            >{{text}}</a>
-          {{/if}}
+<div class='p-5 pb-0'>
+  <div class='row ms-1 col-12 card'>
+    <div class='nav' ms-0>
+      {{#with navigation}}
+        {{#each links}}
+          <div class='nav-item'>
+            {{#if href}}
+              <a href={{href}} class='nav-link'>{{text}}</a>
+            {{else}}
+              <a
+                href='#'
+                class='nav-link disabled'
+              >{{text}}</a>
+            {{/if}}
 
+          </div>
+        {{/each}}
+        <div class='nav-item'>
+          <a href='#' class='nav-link disabled'>Disabled</a>
         </div>
-      {{/each}}
-      <div class='nav-item'>
-        <a href='#' class='nav-link disabled'>Disabled</a>
-      </div>
-    {{/with}}
+      {{/with}}
+    </div>
   </div>
 </div>
