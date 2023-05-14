@@ -32,10 +32,12 @@
                   {{#if isPrimary}} "btn btn-primary m-1"{{/if}}
                 >{{text}}</a>
               {{/each}}
-
-              {{#each characteristics}}
-                <p>{{title}}: {{value}} </p>
+              <ul>
+                {{#each characteristics}}
+                <li>{{title}}: {{value}} </li>
               {{/each}}
+              </ul>      
+              
 
             </div>
           </div>
